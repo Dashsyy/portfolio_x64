@@ -1,22 +1,21 @@
-<!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
-</html>
+---
+export interface Props {
+    title: string;
+    description: string;
+    url: string;
+}
+const { title, description, url } = Astro.props;
+---
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>{title} | Heng Sunhour</title>
+        <meta name="description" content={description} />
+        <link rel="canonical" href={url} />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <!-- Prevent indexing dev builds -->
+        {import.meta.env.PROD && <meta name="robots" content="index,follow" />}
+    </head>
+    <body> <slot /> </body>
+</html>
