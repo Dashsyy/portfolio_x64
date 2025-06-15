@@ -1,13 +1,13 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
-
-import tailwindcss from '@tailwindcss/vite';
+import tailwind from '@astrojs/tailwind';
 
 // https://astro.build/config
 export default defineConfig({
-  vite: {
-    plugins: [tailwindcss()]
-  },
-  site: 'https://dashsyy.github.io/',
-  base: 'portfolio_x64',
+  integrations: [tailwind()],
+  site: 'https://dashsyy.github.io',
+  base: '/portfolio_x64',
+  build: {
+    assets: '_assets'
+  }
 });

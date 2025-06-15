@@ -1,4 +1,7 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /* Fade-in + slide-up keyframes */
 @keyframes fadeInUp {
   from {
@@ -11,7 +14,7 @@
   }
 }
 
-/* Utility to apply when element is “revealed” */
+/* Utility to apply when element is "revealed" */
 .reveal {
   opacity: 0;
   visibility: hidden;
