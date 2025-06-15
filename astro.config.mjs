@@ -6,8 +6,12 @@ import tailwind from '@astrojs/tailwind';
 export default defineConfig({
   integrations: [tailwind()],
   site: 'https://dashsyy.github.io',
-  base: '/portfolio_x64',
   build: {
-    assets: '_assets'
+    assets: 'assets'
+  },
+  vite: {
+    build: {
+      assetsInlineLimit: 0
+    }
   }
 });
