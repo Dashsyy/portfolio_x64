@@ -13,6 +13,7 @@ const { title, description, url } = Astro.props;
         <title>{title} | Heng Sunhour</title>
         <meta name="description" content={description} />
         <link rel="canonical" href={url} />
+        <link rel="icon" href="./favicon.ico" type="image/x-icon" />
         <link rel="stylesheet" href="./styles/global.css">
         <meta name="viewport" content="width=device-width,initial-scale=1" />
         {import.meta.env.PROD && <meta name="robots" content="index,follow" />}
