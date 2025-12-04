@@ -1,0 +1,231 @@
+---
+import BaseLayout from "../layouts/Layout.astro";
+
+const title = "Curriculum Vitae";
+const description = "CV of Sunhour Heng — Full-Stack / Backend Developer";
+const url = "https://your-domain.com/cv";
+---
+
+<BaseLayout {title} {description} {url}>
+	<link rel="stylesheet" href="https://unpkg.com/@sakun/system.css" />
+
+	<style>
+		.section-title h2,
+		.section-title h3,
+		.section-title h1 {
+			margin: 0.2rem 0 0.6rem;
+			border: none !important;
+			padding: 0;
+		}
+	</style>
+
+	<!-- Desktop container -->
+	<div
+		style="
+      max-width: 1100px;
+      margin: 40px auto;
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      grid-gap: 20px;
+    "
+	>
+		<!-- LEFT COLUMN — Profile, Contact, Skills -->
+		<div style="display: flex; flex-direction: column; gap: 20px;">
+			<!-- PROFILE WINDOW -->
+			<div class="window">
+				<div class="title-bar">
+					<div class="title-bar-text">Profile</div>
+				</div>
+				<div
+					class="window-body"
+					style="padding: 1.2rem; font-size: 14px;"
+				>
+					<h2 style="margin-top: 0;">Sunhour Heng</h2>
+					<p><b>Full-Stack Developer (Backend-Focused)</b></p>
+
+					<p>
+						Backend-heavy full-stack developer specializing in API
+						design, microservices, and enterprise telecom
+						integrations. Passionate about building reliable
+						systems, improving performance, and creating scalable
+						infrastructure.
+					</p>
+				</div>
+			</div>
+
+			<!-- CONTACT WINDOW -->
+			<div class="window">
+				<div class="title-bar">
+					<div class="title-bar-text">Contact</div>
+				</div>
+				<div
+					class="window-body"
+					style="padding: 1.2rem; font-size: 14px;"
+				>
+					<ul style="margin: 0; padding-left: 1rem;">
+						<li><b>📍 Location:</b> Phnom Penh, Cambodia</li>
+						<li><b>📱 Phone:</b> +855 12 358 051</li>
+						<li><b>📧 Email:</b> sunhour012@gmail.com</li>
+					</ul>
+				</div>
+			</div>
+
+			<!-- SKILLS WINDOW -->
+			<div class="window">
+				<div class="title-bar">
+					<div class="title-bar-text">Core Skills</div>
+				</div>
+				<div
+					class="window-body"
+					style="padding: 1.2rem; font-size: 14px;"
+				>
+					<ul style="padding-left: 1rem; margin: 0;">
+						<li>PHP / Laravel</li>
+						<li>Java / Spring Boot</li>
+						<li>API Design & Integration</li>
+						<li>Microservices & Distributed Systems</li>
+						<li>Kubernetes (K8s), Rancher</li>
+						<li>ArgoCD GitOps Workflows</li>
+						<li>CI/CD Automation</li>
+						<li>System Architecture</li>
+						<li>SQL, Caching, Optimization</li>
+						<li>Telemetry & Observability</li>
+					</ul>
+				</div>
+			</div>
+
+			<!-- EDUCATION WINDOW -->
+			<div class="window">
+				<div class="title-bar">
+					<div class="title-bar-text">Education</div>
+				</div>
+				<div
+					class="window-body"
+					style="padding: 1.2rem; font-size: 14px;"
+				>
+					<ul style="padding-left: 1rem;">
+						<li>
+							<b>Bachelor of Technology — Software Engineering</b
+							><br />
+							Limkokwing University (2017–2021)
+						</li>
+						<li>
+							<b>High School Diploma</b><br />
+							Sovannaphumi School (2011–2017)
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<!-- RIGHT COLUMN — Experience -->
+		<div style="display: flex; flex-direction: column; gap: 20px;">
+			<!-- EXPERIENCE WINDOW -->
+			<div class="window">
+				<div class="title-bar">
+					<div class="title-bar-text">Work Experience</div>
+				</div>
+				<div
+					class="window-body"
+					style="padding: 1.2rem; font-size: 14px;"
+				>
+					<!-- Smart Axiata -->
+					<section style="margin-bottom: 1.5rem;">
+						<h3 style="margin-top: 0;">
+							Application Developer — Smart Axiata
+						</h3>
+						<p><i>Jun 2024 – Present · Phnom Penh, Cambodia</i></p>
+
+						<ul style="padding-left: 1rem;">
+							<li>
+								Lead backend development for Smart–ABA Mini App
+								integrating multiple telecom systems.
+							</li>
+							<li>
+								Implemented eSIM activation, data-pack
+								management, and subscription renewal flows.
+							</li>
+							<li>
+								Architected microservices and real-time
+								transaction monitoring framework.
+							</li>
+							<li>
+								Designed dynamic configuration & feature toggle
+								system for instant rollout.
+							</li>
+							<li>
+								Migrated provisioning logic from Splynx to new
+								platform with zero downtime.
+							</li>
+							<li>
+								Built fault-tolerant pipelines with retry,
+								idempotency & recovery workflows.
+							</li>
+							<li>
+								Collaborated cross-functionally to maintain high
+								uptime and fast product delivery.
+							</li>
+						</ul>
+
+						<p><b>Key ISP Integrations:</b></p>
+						<ul style="padding-left: 1rem;">
+							<li>Subscriber creation & Core CBS sync</li>
+							<li>
+								Automated service activation, suspension,
+								termination
+							</li>
+							<li>Provisioning & transaction audit logs</li>
+							<li>Self-healing scheduler with health checks</li>
+						</ul>
+					</section>
+
+					<!-- Beniten -->
+					<section style="margin-bottom: 1.5rem;">
+						<h3>Full-Stack Web Developer — Beniten</h3>
+						<p><i>Feb 2022 – Jun 2024 · Phnom Penh, Cambodia</i></p>
+
+						<ul style="padding-left: 1rem;">
+							<li>
+								Delivered full-stack features across enterprise
+								platforms.
+							</li>
+							<li>
+								Maintained infrastructure and built new product
+								modules.
+							</li>
+							<li>
+								Developed backend APIs, frontend interfaces, and
+								internal tools.
+							</li>
+							<li>
+								Worked with Vue, React, Laravel, SQL, Tailwind,
+								Bootstrap.
+							</li>
+						</ul>
+					</section>
+
+					<!-- Intern -->
+					<section>
+						<h3>Backend Developer Intern — Beniten</h3>
+						<p><i>Oct 2021 – Feb 2022 · Phnom Penh, Cambodia</i></p>
+
+						<ul style="padding-left: 1rem;">
+							<li>
+								Worked within Agile/Scrum team to deliver
+								incremental improvements.
+							</li>
+							<li>
+								Collaborated closely with frontend to ship
+								cohesive features.
+							</li>
+							<li>
+								Developed and tested backend services using
+								Laravel.
+							</li>
+						</ul>
+					</section>
+				</div>
+			</div>
+		</div>
+	</div>
+</BaseLayout>
